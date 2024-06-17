@@ -8,12 +8,14 @@ import Lifecycle from './components/LifeCycle.jsx'
 import Keys from './components/ListAndKeys.jsx'
 import {ConditionalRenderingUsingIf, ConditionalRenderingUsingTernary, ConditionalRenderingUsingAnd } 
 from './components/conditionalRendring.jsx'
+import Header from './components/styleComponent'
 
 function App() {
   const [count, setCount] = useState(0)
 
   return (
     <>
+    <Header/>
   <Functional name="Tarun"/>
   <Greet work="Making"/>
   <Lifecycle/>
