@@ -6,17 +6,22 @@ import Functional from './components/FunctionalComponent.jsx'
 import Greet from './components/ClassComponents.jsx'
 import Lifecycle from './components/LifeCycle.jsx'
 import Keys from './components/ListAndKeys.jsx'
+import {ConditionalRenderingUsingIf, ConditionalRenderingUsingTernary, ConditionalRenderingUsingAnd } 
+from './components/conditionalRendring.jsx'
 
 function App() {
   const [count, setCount] = useState(0)
 
   return (
-    <React.Fragment>
+    <>
   <Functional name="Tarun"/>
   <Greet work="Making"/>
   <Lifecycle/>
     <Keys/>
-    </React.Fragment>
+    <ConditionalRenderingUsingIf/>
+    <ConditionalRenderingUsingTernary/>
+    <ConditionalRenderingUsingAnd/>
+    </>
 
   )
 }
