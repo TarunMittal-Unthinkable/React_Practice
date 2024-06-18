@@ -8,7 +8,10 @@ import Lifecycle from './components/LifeCycle.jsx'
 import Keys from './components/ListAndKeys.jsx'
 import {ConditionalRenderingUsingIf, ConditionalRenderingUsingTernary, ConditionalRenderingUsingAnd } 
 from './components/conditionalRendring.jsx'
-import Header from './components/styleComponent'
+import Header from './components/styleComponent.jsx'
+import TwoWayDataBinding from './components/TwoWayDataBinding.jsx'
+import UseRefComponent from './components/UseRefComponent.jsx'
+import TimerChallenge from './components/TimeChallenge.jsx'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -23,6 +26,11 @@ function App() {
     <ConditionalRenderingUsingIf/>
     <ConditionalRenderingUsingTernary/>
     <ConditionalRenderingUsingAnd/>
+    <TwoWayDataBinding initialName="Player 1" symbol="X" />
+    <TwoWayDataBinding initialName="Player 2" symbol="O" />
+    <UseRefComponent/>
+    <TimerChallenge title="Easy" targetTime={1} />
+    <TimerChallenge title="Not easy" targetTime={5} />
     </>
 
   )
