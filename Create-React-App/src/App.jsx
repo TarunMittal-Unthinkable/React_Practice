@@ -12,10 +12,14 @@ import Header from './components/styleComponent.jsx'
 import TwoWayDataBinding from './components/TwoWayDataBinding.jsx'
 import UseRefComponent from './components/UseRefComponent.jsx'
 import TimerChallenge from './components/TimeChallenge.jsx'
-
+import Context from './components/contextApi/Context.jsx';
+import Memo from './components/UseMemo.jsx';
+import UseCallback from './components/UseCallback.jsx';
+import UseStateWithObjectAndArray from './components/UseStateWithObjectAndArray.jsx';
+import UseReducer from './components/UseReducer.jsx';
+import LiftingStateUp from './components/LiftingStateUp.jsx';
 function App() {
-  const [count, setCount] = useState(0)
-
+  
   return (
     <>
     <Header/>
@@ -31,6 +35,12 @@ function App() {
     <UseRefComponent/>
     <TimerChallenge title="Easy" targetTime={1} />
     <TimerChallenge title="Not easy" targetTime={5} />
+    <Context/>
+    <Memo/>
+    <UseCallback/>
+    <UseStateWithObjectAndArray/>
+    <UseReducer/>
+    <LiftingStateUp getData={(name)=>{console.log(name)}}/>
     </>
 
   )

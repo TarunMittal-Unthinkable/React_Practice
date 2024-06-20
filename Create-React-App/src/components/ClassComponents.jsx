@@ -13,6 +13,9 @@ class Greet extends Component {
         this.setState({count:this.state.count+1})
 
     }
+    decreaseCount = ()=>{
+        this.setState({count:this.state.count>0?this.state.count-1:0})
+    }
     render() {
         return (
             <div>
@@ -20,6 +23,7 @@ class Greet extends Component {
                 <h2>I am {this.props.work} {this.state.name}</h2>
                 <h2>I worked on project {this.state.count} times</h2>
                 <button onClick={()=>this.onCLickUpdate()}>Click Me!</button>
+                <button onClick={()=>this.decreaseCount()}>Reset</button>
             </div>
             )
         }
