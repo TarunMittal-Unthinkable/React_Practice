@@ -10,6 +10,10 @@ class Greet extends Component {
         }
     }
     onCLickUpdate = ()=>{
+        if (this.state.count === 5) {
+            throw new Error('No users provided!');
+          }
+        
         this.setState({count:this.state.count+1})
 
     }

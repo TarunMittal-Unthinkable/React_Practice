@@ -18,13 +18,20 @@ import UseCallback from './components/UseCallback.jsx';
 import UseStateWithObjectAndArray from './components/UseStateWithObjectAndArray.jsx';
 import UseReducer from './components/UseReducer.jsx';
 import LiftingStateUp from './components/LiftingStateUp.jsx';
+import ErrorBoundary from './components/ErrorBoundary.jsx';
+import ButtonHover from './components/HOC/ButtonHover.jsx';
+import ButtonClick from './components/HOC/ButtonClick.jsx';
+import Login from './components/StateLogin.jsx';
+
 function App() {
   
   return (
     <>
     <Header/>
   <Functional name="Tarun"/>
+  <ErrorBoundary>
   <Greet work="Making"/>
+  </ErrorBoundary>
   <Lifecycle/>
     <Keys/>
     <ConditionalRenderingUsingIf/>
@@ -41,6 +48,9 @@ function App() {
     <UseStateWithObjectAndArray/>
     <UseReducer/>
     <LiftingStateUp getData={(name)=>{console.log(name)}}/>
+      <ButtonClick />
+      <ButtonHover />
+      <Login/>
     </>
 
   )
